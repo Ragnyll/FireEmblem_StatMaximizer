@@ -21,3 +21,4 @@ if __name__ == '__main__':
                     raise TypeError
             except TypeError:
                 print('The generated json file was not valid')
+            # add a case to make sure there are enough values and they have the correct dict keys

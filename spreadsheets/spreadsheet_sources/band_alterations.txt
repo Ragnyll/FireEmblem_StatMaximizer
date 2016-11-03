@@ -1,0 +1,13 @@
+KnightWard 0 0 0 0 30 0 0 0
+SwordBand 0 0 0 5 0 5 0 0
+SoldierBand 5 0 0 0 0 0 5 0
+PegasusBand 0 0 0 0 0 5 0 5
+ArcherBand 0 0 0 5 5 0 0 0
+FighterBand 5 5 0 0 0 0 0 0
+ThiefBand 0 0 0 5 5 0 0 0
+PriestBand 0 0 0 0 0 5 0 5
+WyvernBand 0 5 0 0 0 0 5 0
+KnightBand 0 5 0 0 0 0 5 0
+PaladinBand 5 0 0 0 5 0 0 0
+MageBand 0 0 10 0 0 0 0 0
+Other 0 0 0 0 0 0 0 0

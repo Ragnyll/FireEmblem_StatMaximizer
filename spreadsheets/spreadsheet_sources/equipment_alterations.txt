@@ -7,3 +7,12 @@ Horse-slaying -5 0 0 0 5 5 0 -5
 Killerweapons -5 0 0 5 0 -5 5 0
 Braveweapons 5 0 -5 5 0 -5 0 0
 RankE+Cranged	5 5 0 0 -5 0 -5 0
+RankBranged 0 5 5 0 -5 0 0 -5
+MagicWeapons 0 -5 5 0 0 -5 0 5
+RankSWeapons 0 -5 5 -5 0 5 0 0
+RankEspells(+light) 5 0 0 -5 0 0 -5 5
+RankDSpells(+shine) 0 0 0 5 -5 0 -5 5
+LongRangedSpells -5 -5 5 0 0 5 0 0
+RankASpells 0 -5 5 0 5 -5 0 0
+RankSSpells 0 -5 5 0 0 0 -5 5
+Other 0 0 0 0 0 0 0 0

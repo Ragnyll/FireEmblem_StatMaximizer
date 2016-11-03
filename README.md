@@ -11,6 +11,6 @@ character in Fire Emblem: Path of Radiance. This is useful because:
 
 Needless to say a tool to figure out how to create the perfect monsters at level 20
 is cool. This wont give you the exact path on what do, but should give you some
-heuristics to follow.
+good heuristics to follow.
 
 All values come from serenes.net
