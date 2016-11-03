@@ -8,7 +8,7 @@ from os import listdir
 from os.path import isfile, join
 
 if __name__ == '__main__':
-    root_dir = './spreadsheets/'
+    root_dir = './spreadsheets/data_objects/'
     spreadsheets = [f for f in listdir(root_dir) if isfile(join(root_dir, f))]
 
     # make sure that each json object is valid
