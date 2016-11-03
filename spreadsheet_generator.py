@@ -21,7 +21,11 @@ if __name__ == '__main__':
                         name[s[0]]['4'] = float(s[4])
                         name[s[0]]['5'] = float(s[5])
                         name[s[0]]['10'] = float(s[6])
-                    elif raw_data_file == 'character_growth_rates.txt' or raw_data_file == 'character_stat_caps':
+                    elif raw_data_file == 'starting_lvls.txt':
+                        s = line.split()
+                        name[s[0]] = {}
+                        name[s[0]]['starting_lvl'] = int(s[1])
+                    elif raw_data_file == 'character_growth_rates.txt' or raw_data_file == 'character_stat_caps.txt' or raw_data_file == 'class_change_bonuses.txt':
                         s = line.split()
                         name[s[0]] = {}
                         name[s[0]]['HP'] = int(s[1])
