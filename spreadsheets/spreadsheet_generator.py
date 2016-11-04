@@ -3,7 +3,7 @@ from os import listdir
 from os.path import isfile, join
 
 if __name__ == '__main__':
-    root_dir = './spreadsheets/spreadsheet_sources/'
+    root_dir = './spreadsheet_sources/'
     filenames = [f for f in listdir(root_dir) if isfile(join(root_dir, f))]
 
     for raw_data_file in filenames:
@@ -50,8 +50,11 @@ if __name__ == '__main__':
         except ValueError:
             print('The value Error occured in: ' + raw_data_file)
             print('On line ' + line)
+        except IndexError:
+            print('The IndexError occured in: ' + raw_data_file)
+            print('on line ' + line)
 
-        stats_file = './spreadsheets/data_objects/' + \
+        stats_file = './data_objects/' + \
             raw_data_file[0:-4] + '.json'
         with open(stats_file, 'w') as dump_file:
             json.dump(name, dump_file)

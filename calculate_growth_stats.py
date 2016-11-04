@@ -3,6 +3,7 @@ import json
 LEVEL_MAX = 40
 SPREADSHEET_PATH = './spreadsheets/data_objects/'
 
+
 def calc_levels_left(char_name):
     """calculates the amount of levels a character has left to gain
 
@@ -40,13 +41,35 @@ def calc_stat_gains_to_max(char_name):
 
     for stat_type in char_stat_caps:
         if class_change_stats is not None:
-            char_stat_caps[stat_type] = char_stat_caps[stat_type] - char_starting_stats[stat_type] - class_change_stats[stat_type]
+            char_stat_caps[stat_type] = char_stat_caps[
+                stat_type] - char_starting_stats[stat_type] - class_change_stats[stat_type]
         else:
-            char_stat_caps[stat_type] = char_stat_caps[stat_type] - char_starting_stats[stat_type]
+            char_stat_caps[stat_type] = char_stat_caps[
+                stat_type] - char_starting_stats[stat_type]
 
     return char_stat_caps
+
+
+def growth_points_to_max(char_name, stats):
+    """Gives the number of growth points needed to max given stats
+    NOTE: subtracts out a characters base growth points for each stat
+
+    param char_name: string denoting the name of the character in question
+
+    param stats dict: The stats dict has the amount of stats left to hit the stat cap
+
+    rtype dict: mapping of stat to growth points to max a stat
+    """
+    with open(SPREADSHEET_PATH + 'starting_growth_points.json', 'r') as starting_growth_points:
+        char_starting_gp = json.load(starting_growth_points)[char_name]
+
+    for stat in stats:
+        stats[stat] = (stats[stat] * 100) - char_starting_gp[stat]
+
+    return stats
 
 if __name__ == '__main__':
     character = input('Which character\'s stats do you want to max? \n')
     levels_left = calc_levels_left(character)
     gains_to_max = calc_stat_gains_to_max(character)
+    gp_to_max = growth_points_to_max(character, gains_to_max)
