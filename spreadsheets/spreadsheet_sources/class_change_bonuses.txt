@@ -7,6 +7,7 @@ Ilyana 4	2	1	2	2	2	2	0
 Jill 5	2	1	2	2	2	1	0
 Kieran 3	2	2	2	2	2	3	0
 Makalov 3	2	2	2	2	2	3	0
+Marcia 4	2	2	2	1	2	3	0
 Mia 4	1	2	2	2	2	2	0
 Mist 3	2	4	1	3	3	2	0
 Nephenee 4	2	1	2	2	2	2	0

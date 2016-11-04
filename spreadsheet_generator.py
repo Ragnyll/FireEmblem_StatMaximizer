@@ -11,7 +11,7 @@ if __name__ == '__main__':
             name = {}
             filename = str(root_dir + raw_data_file)
             with open(filename, 'r') as inFile:
-                for line in inFile: # this line is probably inefficient cuz of the amount of checks it takes, but whatever
+                for line in inFile:  # this line is probably inefficient cuz of the amount of checks it takes, but whatever
                     if raw_data_file == 'BExp_adjusted_growth_rates.txt':
                         s = line.split()
                         name[s[0]] = {}
@@ -25,7 +25,7 @@ if __name__ == '__main__':
                         s = line.split()
                         name[s[0]] = {}
                         name[s[0]]['starting_lvl'] = int(s[1])
-                    elif raw_data_file == 'character_growth_rates.txt' or raw_data_file == 'character_stat_caps.txt' or raw_data_file == 'class_change_bonuses.txt':
+                    elif raw_data_file == 'character_growth_rates.txt' or raw_data_file == 'character_stat_caps.txt' or raw_data_file == 'class_change_bonuses.txt' or raw_data_file == 'starting_stats.txt':
                         s = line.split()
                         name[s[0]] = {}
                         name[s[0]]['HP'] = int(s[1])
@@ -52,6 +52,6 @@ if __name__ == '__main__':
             print('On line ' + line)
 
         stats_file = './spreadsheets/data_objects/' + \
-            raw_data_file[0:-5] + '.json'
+            raw_data_file[0:-4] + '.json'
         with open(stats_file, 'w') as dump_file:
             json.dump(name, dump_file)
